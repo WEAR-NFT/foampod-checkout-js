@@ -1,16 +1,16 @@
 import classNames from 'classnames';
-import { FieldProps, FormikProps, withFormik } from 'formik';
-import React, { FunctionComponent, memo, ReactNode, useCallback } from 'react';
+import { FormikProps, withFormik } from 'formik';
+import React, { FunctionComponent, memo, ReactNode } from 'react';
 import { object, string } from 'yup';
 
 import { TranslatedString, withLanguage, WithLanguageProps } from '@bigcommerce/checkout/locale';
 
 import { getPrivacyPolicyValidationSchema, PrivacyPolicyField } from '../privacyPolicy';
 import { Button, ButtonVariant } from '../ui/button';
-import { BasicFormField, Fieldset, Form, Legend } from '../ui/form';
+import { Fieldset, Form, Legend } from '../ui/form';
 
 import EmailField from './EmailField';
-import SubscribeField from './SubscribeField';
+// import SubscribeField from './SubscribeField';
 
 export interface GuestFormProps {
     canSubscribe: boolean;
@@ -36,23 +36,23 @@ export interface GuestFormValues {
 const GuestForm: FunctionComponent<
     GuestFormProps & WithLanguageProps & FormikProps<GuestFormValues>
 > = ({
-    canSubscribe,
+    // canSubscribe,
     checkoutButtons,
     continueAsGuestButtonLabelId,
     isLoading,
     onChangeEmail,
-    onShowLogin,
+    // onShowLogin,
     privacyPolicyUrl,
-    requiresMarketingConsent,
+    // requiresMarketingConsent,
     isExpressPrivacyPolicy,
     isFloatingLabelEnabled,
 }) => {
-    const renderField = useCallback(
-        (fieldProps: FieldProps<boolean>) => (
-            <SubscribeField {...fieldProps} requiresMarketingConsent={requiresMarketingConsent} />
-        ),
-        [requiresMarketingConsent],
-    );
+    // const renderField = useCallback(
+    //     (fieldProps: FieldProps<boolean>) => (
+    //         <SubscribeField {...fieldProps} requiresMarketingConsent={requiresMarketingConsent} />
+    //     ),
+    //     [requiresMarketingConsent],
+    // );
 
     return (
         <Form
@@ -71,9 +71,9 @@ const GuestForm: FunctionComponent<
                     <div className="customerEmail-body">
                         <EmailField isFloatingLabelEnabled={isFloatingLabelEnabled} onChange={onChangeEmail}/>
 
-                        {(canSubscribe || requiresMarketingConsent) && (
+                        {/* {(canSubscribe || requiresMarketingConsent) && (
                             <BasicFormField name="shouldSubscribe" render={renderField} />
-                        )}
+                        )} */}
                     </div>
 
                     <div
@@ -98,7 +98,7 @@ const GuestForm: FunctionComponent<
                     <PrivacyPolicyField isExpressPrivacyPolicy={isExpressPrivacyPolicy} url={privacyPolicyUrl} />
                 )}
 
-                {!isLoading && (
+                {/* {!isLoading && (
                     <p>
                         <TranslatedString id="customer.login_text" />{' '}
                         <a
@@ -109,7 +109,7 @@ const GuestForm: FunctionComponent<
                             <TranslatedString id="customer.login_action" />
                         </a>
                     </p>
-                )}
+                )} */}
 
                 {checkoutButtons}
             </Fieldset>
