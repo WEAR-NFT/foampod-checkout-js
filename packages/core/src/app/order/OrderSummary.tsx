@@ -25,7 +25,7 @@ const OrderSummary: FunctionComponent<OrderSummaryProps & OrderSummarySubtotalsP
     taxes,
     storeCurrency,
     shopperCurrency,
-    headerLink,
+    // headerLink,
     additionalLineItems,
     lineItems,
     total,
@@ -36,7 +36,7 @@ const OrderSummary: FunctionComponent<OrderSummaryProps & OrderSummarySubtotalsP
 
     return (
         <article className="cart optimizedCheckout-orderSummary" data-test="cart">
-            <OrderSummaryHeader>{headerLink}</OrderSummaryHeader>
+            <OrderSummaryHeader />
 
             <OrderSummarySection>
                 <OrderSummaryItems displayLineItemsCount items={nonBundledLineItems} />
