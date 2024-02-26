@@ -172,7 +172,7 @@ const PaymentSubmitButton: FunctionComponent<
         isLoading={isSubmitting}
         size={ButtonSize.Large}
         type="submit"
-        variant={ButtonVariant.Action}
+        variant={ButtonVariant.Primary}
     >
         <PaymentSubmitButtonText
             brandName={brandName}
