@@ -7,7 +7,7 @@ export default function getLineItemsCount({
     customItems,
 }: LineItemMap): number {
     return (
-        physicalItems.length +
+        physicalItems.filter((item) => typeof item.parentId !== 'string').length +
         digitalItems.length +
         giftCertificates.length +
         (customItems || []).length
