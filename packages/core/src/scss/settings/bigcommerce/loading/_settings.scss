@@ -23,10 +23,10 @@ $loadingNotification-top:                     spacing("double") * 2;
 $loadingNotification-top--startPosition:      spacing("double") * 2.5;
 $loadingNotification-textAlign:               center;
 
-$loadingNotification-label-background:        color("greys", "darker");
+// $loadingNotification-label-background:        color("greys", "darker");
 $loadingNotification-label-color:             color("whites", "bright");
 $loadingNotification-label-spinnerColor:      color("whites", "bright") color("whites", "bright") color("greys", "dark")  color("greys", "dark");
-$loadingNotification-label-fontSize:          fontSize("smaller");
+$loadingNotification-label-fontSize:          fontSize("larger");
 $loadingNotification-label-radius:            $global-radius;
 $loadingNotification-label-verticalSpacing:   spacing("quarter") + spacing("eighth");
 $loadingNotification-label-horizontalSpacing: spacing("base") + spacing("eighth");
