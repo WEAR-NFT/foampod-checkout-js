@@ -14,7 +14,8 @@
     .button {
         text-transform: uppercase;
         transition: all 100ms ease-out;
-
+        border-radius: 30px;
+        
         &:focus {
             border-color: color("highlight");
             box-shadow: 0 0 3px 1px rgba(color("highlight"), 0.6);
