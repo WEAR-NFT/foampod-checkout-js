@@ -24,7 +24,7 @@ exports[`OrderSummaryItems when it has 4 line items or less renders product list
       productOptions={
         Array [
           Object {
-            "content": "n v",
+            "content": "n",
             "testId": "cart-item-product-option",
           },
         ]

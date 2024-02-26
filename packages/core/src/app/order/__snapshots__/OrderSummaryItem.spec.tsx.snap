@@ -9,6 +9,11 @@ exports[`OrderSummaryItems when amount and amountAfterDiscount are different ren
     className="product-column product-figure"
   >
     <img />
+    <span
+      className="product-count"
+    >
+      2
+    </span>
   </figure>
   <div
     className="product-column product-body"
@@ -17,7 +22,8 @@ exports[`OrderSummaryItems when amount and amountAfterDiscount are different ren
       className="product-title optimizedCheckout-contentPrimary"
       data-test="cart-item-product-title"
     >
-      2 x Product
+      Product
+       - 
     </h4>
     <ul
       className="product-options optimizedCheckout-contentSecondary"
