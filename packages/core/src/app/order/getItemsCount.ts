@@ -6,7 +6,8 @@ export default function getItemsCount({
     giftCertificates,
     customItems,
 }: LineItemMap): number {
-    const totalItemsCount = [...physicalItems, ...digitalItems, ...(customItems || [])].reduce(
+    const actualPhysicalItems = physicalItems.filter((item) => typeof item.parentId !== 'string');
+    const totalItemsCount = [...actualPhysicalItems, ...digitalItems, ...(customItems || [])].reduce(
         (total, item) => (total += item.quantity),
         0,
     );
