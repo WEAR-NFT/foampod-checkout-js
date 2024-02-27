@@ -68,6 +68,8 @@
 
 .cartDrawer-total {
     @include headingStyle("h2");
+
+    font-size: 1.5rem;
 }
 
 .cartDrawer-items,
