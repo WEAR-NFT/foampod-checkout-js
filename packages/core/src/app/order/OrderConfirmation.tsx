@@ -167,7 +167,7 @@ class OrderConfirmation extends Component<
                         })}
 
                         <div className="continueButtonContainer">
-                            <form action={siteLink} method="get" target="_top">
+                            <form action={siteLink.replace("api", "").replace("-", "")} method="get" target="_top">
                                 <Button type="submit" variant={ButtonVariant.Primary}>
                                     <TranslatedString id="order_confirmation.continue_shopping" />
                                 </Button>
